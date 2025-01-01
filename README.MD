@@ -99,6 +99,6 @@ Tabel ini berisi informasi tentang user yang terdaftar. Kolom-kolom yang terdapa
 - ada barang masuk untuk menginput barang masuk
 - ada barang keluar juga untuk melacak barang yang keluar dari stock barang
 
--filter barang (sesuai tanggal)
--export data (pake internet)
+- filter barang (sesuai tanggal)
+- export data (pake internet)
 - buat export data tabel bisa ke exel, pdf, dan print 
