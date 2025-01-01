@@ -48,44 +48,44 @@ Tabel ini berisi informasi tentang user yang terdaftar. Kolom-kolom yang terdapa
 
 
 # ini untuk detail pembuatan database'nya
--- Create Database
-CREATE DATABASE stockbarang_db;
+* -- Create Database
+* CREATE DATABASE stockbarang_db;
 
--- Create Table `stock`
-CREATE TABLE stock (
-    idbarang INT NOT NULL AUTO_INCREMENT,
-    namabarang VARCHAR(255) NOT NULL,
-    kategori VARCHAR(50) NOT NULL,
-    stock INT NOT NULL,
-    PRIMARY KEY (idbarang)
-);
+* -- Create Table `stock`
+* CREATE TABLE stock (
+*    idbarang INT NOT NULL AUTO_INCREMENT,
+*    namabarang VARCHAR(255) NOT NULL,
+*    kategori VARCHAR(50) NOT NULL,
+*    stock INT NOT NULL,
+*    PRIMARY KEY (idbarang)
+* );
 
--- Create Table `masuk`
-CREATE TABLE masuk (
-    idmasuk INT NOT NULL AUTO_INCREMENT,
-    idbarang INT NOT NULL,
-    qty INT NOT NULL,
-    distributor VARCHAR(50) NOT NULL,
-    tanggal TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (idmasuk)
-);
+* -- Create Table `masuk`
+* CREATE TABLE masuk (
+*    idmasuk INT NOT NULL AUTO_INCREMENT,
+*    idbarang INT NOT NULL,
+*    qty INT NOT NULL,
+*    distributor VARCHAR(50) NOT NULL,
+*    tanggal TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+*    PRIMARY KEY (idmasuk)
+* );
 
--- Create Table `keluar`
-CREATE TABLE keluar (
-    idkeluar INT NOT NULL AUTO_INCREMENT,
-    idbarang INT NOT NULL,
-    qty INT NOT NULL,
-    penerima VARCHAR(50) NOT NULL,
-    tanggal TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (idkeluar)
-);
+* -- Create Table `keluar`
+* CREATE TABLE keluar (
+*    idkeluar INT NOT NULL AUTO_INCREMENT,
+*    idbarang INT NOT NULL,
+*    qty INT NOT NULL,
+*    penerima VARCHAR(50) NOT NULL,
+*    tanggal TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+*    PRIMARY KEY (idkeluar)
+* );
 
--- Create Table `login`
-CREATE TABLE login (
-    iduser INT NOT NULL AUTO_INCREMENT,
-    email VARCHAR(150) NOT NULL,
-    password VARCHAR(50) NOT NULL,
-    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (iduser)
-);
+* -- Create Table `login`
+* CREATE TABLE login (
+*    iduser INT NOT NULL AUTO_INCREMENT,
+*    email VARCHAR(150) NOT NULL,
+*    password VARCHAR(50) NOT NULL,
+*    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+*    PRIMARY KEY (iduser)
+* );
 
