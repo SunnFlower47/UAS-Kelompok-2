@@ -1,7 +1,7 @@
 # KELOMPOK 2 UAS STT WATUKANCANA TEKNIK INFORMATIKA 2024(semester 1)
 * `RIDWAN ANDRIAN(241351144)`
-* `RIDWAN ANDRIAN()`
-* `RIDWAN ANDRIAN()`
+* `SAVRIDA SANI()`
+* `FARIS()`
 
 
 # Struktur Database
@@ -89,3 +89,4 @@ Tabel ini berisi informasi tentang user yang terdaftar. Kolom-kolom yang terdapa
 *    PRIMARY KEY (iduser)
 * );
 
+# UNTUK FITUR EXPORTDATA ITU HARUS MENGUNAKAN INTERNET
