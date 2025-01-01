@@ -89,22 +89,3 @@ CREATE TABLE login (
     PRIMARY KEY (iduser)
 );
 
-website stok barang
-- register > daftar > login (harus login dulu)
-- nama user (gmail) dibawah pojok
--setelah daftar cek database lalu coba login
-- kita tidak bisa masuk index tanpa login
-- setelah login tidak bisa kembali ke login
-- setelah login kita bisa lihat sebagai apa
-
-- stok barang -
-- cara menambah, tambah nama nama stok jumlah barang distributor, submit
-- ada barang masuk. dipilih, submit (nambah di stok barang)
-- barang keluar, isi, submit (barang berkurang)
-- bisa diedit dan hapus data
-
-filter barang (sesuai tanggal)
-- awal data sampai akhir data 
-export data (pake internet)
-- buat export data tabel ke exel, pdt, print lgsg bisa
-- ada export data masuk, keluar
