@@ -101,4 +101,4 @@ Tabel ini berisi informasi tentang user yang terdaftar. Kolom-kolom yang terdapa
 
 - filter barang (sesuai tanggal)
 - export data (pake internet)
-- buat export data tabel bisa ke exel, pdf, dan print 
+- buat export data tabel bisa ke exel, pdf, dan print langsung
