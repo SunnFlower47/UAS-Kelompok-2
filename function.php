@@ -17,24 +17,30 @@ function generateRandomId() {
     return mt_rand(10000, 99999);
 }
 //tambah barang baru
-if(isset($_POST['addnewbarang'])){
-    $namabarang = $_POST['namabarang'];
-    $kategori = $_POST['kategori'];
-    $stock = $_POST['stock'];
+if (isset($_POST['addnewbarang'])) {
+    $namabarang = mysqli_real_escape_string($con, $_POST['namabarang']);
+    $kategori = mysqli_real_escape_string($con, $_POST['kategori']);
+    $stock = intval($_POST['stock']);
 
     // Generate a random 5-digit ID
     $idb = generateRandomId();
 
-    // Insert the new barang into the database
-    $query = "INSERT INTO stock (idbarang, namabarang, kategori, stock) VALUES ('$idb', '$namabarang', '$kategori', '$stock')";
-    $result = mysqli_query($con, $query);
+    // Check if the item already exists
+    $check_duplicate = mysqli_query($con, "SELECT * FROM stock WHERE namabarang = '$namabarang'");
+    if (mysqli_num_rows($check_duplicate) > 0) {
+        echo "<script>alert('Barang sudah ada');</script>";
+    } else {
+        // Insert the new barang into the database
+        $query = "INSERT INTO stock (idbarang, namabarang, kategori, stock) VALUES ('$idb', '$namabarang', '$kategori', '$stock')";
+        $result = mysqli_query($con, $query);
 
-    if($result){
-        echo "<script>alert('Barang Berhasil Ditambahkan');</script>";
-        echo "<script>location='index.php';</script>";
-    }else{
-        echo "<script>alert('barang Gagal Ditambahkan');</script>";
+        if ($result) {
+            echo "<script>alert('Barang Berhasil Ditambahkan');</script>";
+            echo "<script>location='index.php';</script>";
+    } else {
+        echo "<script>alert('Barang Gagal Ditambahkan');</script>";
     }
+}
 }
 
 
