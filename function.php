@@ -25,19 +25,21 @@ if (isset($_POST['addnewbarang'])) {
     // Generate a random 5-digit ID
     $idb = generateRandomId();
 
-    // Check if the item already exists
+    // Check barang sudah ada atau belum
     $check_duplicate = mysqli_query($con, "SELECT * FROM stock WHERE namabarang = '$namabarang'");
     if (mysqli_num_rows($check_duplicate) > 0) {
         echo "<script>alert('Barang sudah ada');</script>";
     } else {
-        // Insert the new barang into the database
+        // masukan barang baru ke database
         $query = "INSERT INTO stock (idbarang, namabarang, kategori, stock) VALUES ('$idb', '$namabarang', '$kategori', '$stock')";
         $result = mysqli_query($con, $query);
 
         if ($result) {
             echo "<script>alert('Barang Berhasil Ditambahkan');</script>";
             echo "<script>location='index.php';</script>";
+            
     } else {
+        //jika barang sudah ada maaka akan muncul alert barang sudah ada dan tidak adan masuk ke data base (supaya tidak ada barang yang sama)
         echo "<script>alert('Barang Gagal Ditambahkan');</script>";
     }
 }
