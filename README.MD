@@ -89,4 +89,16 @@ Tabel ini berisi informasi tentang user yang terdaftar. Kolom-kolom yang terdapa
 *    PRIMARY KEY (iduser)
 * );
 
-# UNTUK FITUR EXPORTDATA ITU HARUS MENGUNAKAN INTERNET
+# FITUR WEBSITE
+- register > daftar > login (harus login dulu)
+- setelah daftar lalu coba login
+- tidak bisa masuk index tanpa login
+- setelah login tidak bisa kembali ke login harus logout dulu
+
+- ada daftar barang dan stok 
+- ada barang masuk untuk menginput barang masuk
+- ada barang keluar juga untuk melacak barang yang keluar dari stock barang
+
+-filter barang (sesuai tanggal)
+-export data (pake internet)
+- buat export data tabel bisa ke exel, pdf, dan print 
